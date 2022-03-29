@@ -1,0 +1,17 @@
+service: serverless-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'sa-east-1'} # Default SP
+  timeout: 10 # Default Lambda timeout
+  memorySize: 512 # Default Lambda Memory Size
+  environment: # Global Environment variables
+    ${file(./src/configs/${self:provider.stage}.yml)}
+
+functions: ${file(serverless-dynamic.js)} # Default routes dynamic
+
+plugins:
+  - serverless-plugin-typescript

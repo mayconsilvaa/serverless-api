@@ -1,0 +1,7 @@
+createuser:
+  handler: src/modules/users/create.createuser
+  description: Create new User
+  events:
+    - http:
+        path: /user
+        method: post

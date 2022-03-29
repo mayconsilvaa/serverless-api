@@ -1,0 +1,7 @@
+healthz:
+  handler: src/modules/healthz/check.healthz
+  description: Check Application is status
+  events:
+    - http:
+        path: /
+        method: get

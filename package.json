@@ -1,0 +1,20 @@
+{
+  "name": "serverless-api",
+  "version": "1.0.0",
+  "description": "Testing serveless AWS and Typescript",
+  "author": "Maycon Silva",
+  "license": "MIT",
+  "scripts": {
+    "sls-deploy": "serverless deploy",
+    "sls-remove": "serverless remove"
+  },
+  "devDependencies": {
+    "@types/yamljs": "^0.2.31",
+    "serverless-plugin-typescript": "^2.1.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "yamljs": "^0.3.0"
+  }
+}
